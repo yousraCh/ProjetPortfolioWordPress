@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<body>
+<style type="text/css">
+    #identification{
+        width: 40%;
+        height: auto;
+        margin-right: 50px;
+        margin-top: 50px;
+
+    }
+
+</style>
+<div ng-app="myApp" ng-controller="formCtrl">
+    <form id="identification">
+
+            Nom  :
+            <input type="text" ng-model="lastname">
+
+              <br><br>
+
+            Prenom  :
+            <input type="text" ng-model="lastname">
+        </div>
+        <br><br>
+
+            E-mail  :
+            <input type="text" ng-model="mail">
+        </div>
+        <br><br>
+
+            Diplomes  :
+            <input type="radio" ng-model="myVar" value="Bac+5 et plus">Bac+5 et plus
+            <input type="radio" ng-model="myVar" value="Bac+3">Bac+3
+            <input type="radio" ng-model="myVar" value="Bac+2">Bac+2
+
+        <br><br>
+        Mot de passe :<input type="password" ng-model="motdepasse"> <br>
+        <br><br>
+        Confirmation de mot de passe :<input type="password" ng-model="motdepasse"> <br><br>
+        <input type="button" width="20px" value="Valider">
+        <input type="button" width="20px" value="annuler"><br>
+    </form>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('formCtrl', function($scope) {
+        $scope.firstname = "";
+        $scope.motdepasse = "";
+    });
+</script>
+
+</body>
+</html>

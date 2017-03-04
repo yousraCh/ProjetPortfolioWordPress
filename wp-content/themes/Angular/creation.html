@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<body>
+<style type="text/css">
+    #identification{
+        background-color: lightblue;
+        text-align: center;
+        width: 40%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 100px;
+        border-radius: 5%;
+    }
+</style>
+<div ng-app="myApp" ng-controller="formCtrl">
+    <form id="identification">
+
+        Nom Complet  : <br>
+        <input type="text" ng-model="firstname">
+        <br> <br>
+
+        Mot de passe : <br><input type="password" ng-model="motdepasse"> <br>
+        <br>
+        <input type="button" width="20px" value="se connecter"> <br>
+
+    </form>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('formCtrl', function($scope) {
+        $scope.firstname = "";
+        $scope.motdepasse = "";
+    });
+</script>
+
+</body>
+</html>
